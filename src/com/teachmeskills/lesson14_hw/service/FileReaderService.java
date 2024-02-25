@@ -25,10 +25,10 @@ public class FileReaderService {
                 try {
                     if (checkDocumentNumberAndContract(line)) {
                         if (line.startsWith(Consts.CONTRACT_START_NAME_REGEXP)) {
-                            LogMaster.addLog(ConstPath.PATH_CONTRACT_TXT, line);
+                            LogMaster.addLog(ConstPath.PATH_VALID_CONTRACT, line);
 
                         } else if (line.startsWith(Consts.DOC_START_NAME_REGEXP)) {
-                            LogMaster.addLog(ConstPath.PATH_DOCUMENT_TXT, line);
+                            LogMaster.addLog(ConstPath.PATH_VALID_DOCUMENT, line);
                         }
                     }
                 } catch (WrongDocumentFormatException e) {
